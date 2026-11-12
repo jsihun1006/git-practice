@@ -27,5 +27,6 @@ jobs: # task 단위
         env:
           MESSAGE: Hello!!
         run: echo "$MESSAGE"
-
+      - name: Test failure
+        run: exit 1
 
