@@ -1,0 +1,12 @@
+name: GitHub Env Example
+on: workflow_dispatch
+
+jobs:
+  env-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set message
+        run: echo "MESSAGE=Hello from the previous step" >> "$GITHUB_ENV"
+
+      - name: Print message
+        run: echo "$MESSAGE"
